@@ -1,22 +1,15 @@
 <div class="user">
-  <h2>First way to get input data and display</h2>
-  <p class="user__desc">without ngModel</p>
   <div class="user__form">
     <label>Type user name</label>
-    <input (input)="setUserName($event)" type="text" />
-  </div>
-  <p>{{ userName_1 }}</p>
-</div>
-
-<div class="user">
-  <h2>Secound way to get input data and display</h2>
-  <p class="user__desc">with ngModel</p>
-  <div class="user__form">
-    <label>Type user name</label>
-    <input [(ngModel)]="userName_2" type="text" />
-    <button [disabled]="setDisableButton()" (click)="resetValue()">
-      Reset
+    <input [(ngModel)]="userName" type="text" />
+    <button [disabled]="!allowNewUser" (click)="onCreateUser()">
+      Set user
     </button>
   </div>
-  <p>{{ userName_2 }}</p>
+  <p *ngIf="serverCreated; else noUser">
+    User was created! Name is {{ userName }}
+  </p>
+  <ng-template #noUser>
+    <p>No server was created</p>
+  </ng-template>
 </div>

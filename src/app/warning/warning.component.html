@@ -1,0 +1,7 @@
+<div class="warning" [ngStyle]="{ backgroundColor: getColor() }">
+  <h2>Erorr</h2>
+  <p *ngIf="warningStatus; else noDispaly">
+    {{ warningName }}
+  </p>
+  <ng-template #noDispaly> No warning! </ng-template>
+</div>

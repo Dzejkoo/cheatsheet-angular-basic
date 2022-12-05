@@ -5,23 +5,20 @@ import { Component } from '@angular/core';
   templateUrl: './setUser.component.html',
   styleUrls: ['./setUser.component.scss'],
 })
-export class setUserComponent {
-  userName_1 = '';
-  userName_2 = '';
-  disableButton = true;
+export class SetUserComponent {
+  allowNewUser = false;
+  userCreationStatus = 'No user was created!';
+  userName = 'Testname';
+  serverCreated = false;
 
-  setUserName(event: any) {
-    this.userName_1 = event.target.value;
+  constructor() {
+    setTimeout(() => {
+      this.allowNewUser = true;
+    }, 2000);
   }
 
-  setDisableButton() {
-    if (this.userName_2.length > 0) {
-      return !this.disableButton;
-    }
-    return this.disableButton;
-  }
-
-  resetValue() {
-    this.userName_2 = '';
+  onCreateUser() {
+    this.serverCreated = true;
+    this.userCreationStatus = 'User was created! Name is ' + this.userName;
   }
 }
