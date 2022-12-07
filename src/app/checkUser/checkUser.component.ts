@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-checkUser',
   templateUrl: './checkUser.component.html',
+  styleUrls: ['./checkUser.component.scss'],
 })
 export class CheckUserComponent {
   userId = 10;

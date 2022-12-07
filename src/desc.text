@@ -1,0 +1,14 @@
+DYREKTYWY
+
+*ngFor = iterowanie elementów listy, tworzy nowy element HTML 
+        ////EXAMPLE
+        fruits = ['banana', 'apple', 'peach'];
+        <span *ngFor="let fruit of fruits">{{fruit}}</span>
+        Wyiteruje nam 3 nowe spany, z nazwą owocu.
+*ngIf = dodawanie lub usuwanie elementu HTML w zalezności od wartości określanej wenwtąrz.
+        //EXAMPLE
+        isDisable = true; 
+        <div *ngIf="isDisable"></div>
+        Mozna dodać warunek else:
+        <div *ngIf="isDisable; else noDisable">{{isDisable}}</div>
+        <ng-template #noDisable>{{isDisable}}</ng-template>

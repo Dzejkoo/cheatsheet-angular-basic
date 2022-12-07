@@ -1,0 +1,11 @@
+.example {
+  padding-top: 40px;
+  &__number {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.white-text {
+  color: white;
+}

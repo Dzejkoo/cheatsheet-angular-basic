@@ -1,0 +1,13 @@
+<div class="example">
+  <button (click)="onDisplay()">Display Details</button>
+  <p *ngIf="display">Secret password - tuna</p>
+
+  <div class="example__number">
+    <span
+      *ngFor="let element of arrayI; let i = index"
+      [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'white' }"
+      [ngClass]="{ 'white-text': i >= 4 }"
+      >{{ element }}</span
+    >
+  </div>
+</div>

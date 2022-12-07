@@ -10,6 +10,7 @@ export class SetUserComponent {
   userCreationStatus = 'No user was created!';
   userName = 'Testname';
   serverCreated = false;
+  users = ['Testserver_1', 'Testserver_2'];
 
   constructor() {
     setTimeout(() => {
@@ -19,6 +20,7 @@ export class SetUserComponent {
 
   onCreateUser() {
     this.serverCreated = true;
+    this.users.push(this.userName);
     this.userCreationStatus = 'User was created! Name is ' + this.userName;
   }
 }

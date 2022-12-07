@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SetUserComponent } from './setUser/setUsercomponent';
 import { CheckUserComponent } from './checkUser/checkUser.component';
 import { WarningComponent } from './warning/warning.component';
+import { ExampleComponent } from './example/example.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { WarningComponent } from './warning/warning.component';
     SetUserComponent,
     CheckUserComponent,
     WarningComponent,
+    ExampleComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

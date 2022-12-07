@@ -1,0 +1,6 @@
+.status {
+  transition: opacity 1s;
+  &.online {
+    color: black;
+  }
+}

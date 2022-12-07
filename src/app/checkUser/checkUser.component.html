@@ -1,3 +1,7 @@
-<p [ngStyle]="{ backgroundColor: getColor() }">
+<p
+  class="status"
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ online: userStatus === 'online' }"
+>
   User status is {{ userStatus }}
 </p>
